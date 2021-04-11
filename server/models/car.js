@@ -1,0 +1,60 @@
+import mongoose from 'mongoose';
+
+const CarSchema = mongoose.Schema({
+  brand: { type: String, required: true},
+  model: { type: String, required: true},
+  version: { type: String },
+  fuelType: { type: String },
+  engineType: { type: String },
+  comPower: { type: String},
+  comMaxTorque: { type: String},
+  maxPower: { type: String},
+  maxTorque: { type: String}, 
+  numofElectricEngines: { type: String },
+  traction: { type: String },
+  numofSpeed: { type: String },
+  clutchType: { type: String },
+  body: { type: String },
+  numofdoors: { type: String },
+  wheelbase: { type: String },
+  length: { type: String },
+  width: { type: String },
+  height: { type: String },
+  frontAxle: { type: String },
+  rearAxle: { type: String },
+  numofSeats: { type: String },
+  frontBrakes: { type: String },
+  rearBreaks: { type: String },
+  frontTyres: { type: String },
+  rearTyres: { type: String },
+  curbWeight: { type: String },
+  maxTowCap: { type: String },
+  weightPower: { type: String },
+  trunkCap: { type: String },
+  frontSus: { type: String },
+  rearSus: { type: String },
+  topSpeed: { type: String },
+  acceleration: { type: String },
+  batType: { type: String },
+  batCap: { type: String },
+  electricRangeEPA: { type: String },
+  electricRangeWLPT: { type: String },
+  chargeTime: { type: String },
+  fastChargeTime: { type: String },
+  co2EmissionWLTP: { type: String },
+  price: { type: String },
+  picture: { type: String},
+  summmary: { type: String},
+  releaseDate: { 
+    type: Date,
+    default: new Date() 
+  },
+  selectedFileA: { type: String },
+  selectedFileB: { type: String },
+  selectedFileC: { type: String },
+});
+
+
+const Car = mongoose.model('Car', CarSchema);
+
+export default Car;
