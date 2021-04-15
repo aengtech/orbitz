@@ -1,4 +1,4 @@
-import Tip from '../models/tips.js'
+import Tip from '../models/tip.js'
 
 export const getTips = async (req, res) => {
   try {
@@ -20,4 +20,4 @@ export const createTip = async (req, res) => {
   } catch (error) {
       res.status(409).json({ message: error.message });
   }
-}
+} 

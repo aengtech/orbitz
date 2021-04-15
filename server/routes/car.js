@@ -1,12 +1,12 @@
 import express from 'express';
 
-import { getCars, getCar, createCar} from '../controllers/car.js';
+import { getCars, createCar, updateCar } from '../controllers/car.js';
+import auth from '../middleware/auth.js'
 
 const router = express.Router();
 
 router.get('/', getCars);
-
-router.get('/cars/:id', getCar);
-router.post('/upload/post', createCar);
+router.post('/upload/post', auth, createCar);
+router.patch('/:id', auth, updateCar);
 
 export default router;
